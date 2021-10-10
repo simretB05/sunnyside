@@ -398,6 +398,12 @@ template {
           align-items: center;
 }
 
+@media screen and (min-width: 1020px) {
+  .navbar__menu {
+    display: none;
+  }
+}
+
 .navbar__menu-close {
   display: none;
 }
@@ -429,7 +435,23 @@ template {
   margin: 0 auto;
   padding-left: 0;
   background-color: white;
-  display: none;
+}
+
+@media screen and (min-width: 1020px) {
+  .navbar__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    background-color: transparent;
+    position: relative;
+  }
 }
 
 .navbar__list-item {
@@ -437,8 +459,17 @@ template {
   padding-bottom: 1rem;
 }
 
+@media screen and (min-width: 1020px) {
+  .navbar__list-item {
+    padding: 0;
+    margin: 0;
+    color: white;
+  }
+}
+
 .navbar__list-item--link {
   font-size: 1rem;
+  color: white;
   padding: 0.8rem 0.9rem;
   color: #5a636c;
   text-decoration: none;
@@ -449,6 +480,21 @@ template {
   border-radius: 25px;
   color: #23303e;
   text-transform: uppercase;
+}
+
+@media screen and (min-width: 1020px) {
+  .navbar__list-item--link {
+    padding: 0.8rem 0.9rem;
+    color: white;
+    font-size: 15px;
+  }
+  .navbar__list-item--link:hover {
+    background-color: white;
+    font-size: 10px;
+    font-family: "Fraunces", serif;
+    color: #19536b;
+    font-weight: 900;
+  }
 }
 
 .sb1:before {
@@ -463,6 +509,12 @@ template {
   right: 0px;
   top: -18.999px;
   margin: 0;
+}
+
+@media screen and (min-width: 1020px) {
+  .sb1:before {
+    display: none;
+  }
 }
 
 .hero {
