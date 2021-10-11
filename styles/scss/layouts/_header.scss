@@ -80,6 +80,7 @@
             text-transform: uppercase;
         }
         @include min-query($d-laptop) {
+            margin: 0 0.5rem;
             padding: 0.8rem 0.9rem;
             color: $c-white;
             font-size: 15px;
