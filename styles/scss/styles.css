@@ -777,8 +777,9 @@ template {
     display: -ms-flexbox;
     display: flex;
     width: 100%;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -795,6 +796,11 @@ template {
     height: 100%;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -o-object-fit: fill;
+       object-fit: fill;
   }
 }
 
@@ -839,7 +845,10 @@ template {
 
 @media screen and (min-width: 1020px) {
   .Photography-image {
+    width: 100%;
     height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 
@@ -921,11 +930,13 @@ template {
   }
 }
 
-.testimonials__card-main-container {
-  margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@media screen and (min-width: 1020px) {
+  .testimonials__card-main-container {
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .testimonials__card-container {
@@ -1049,7 +1060,7 @@ template {
 
 @media screen and (min-width: 1020px) {
   .images {
-    width: 40%;
+    width: 25%;
     height: 100%;
   }
 }
@@ -1076,11 +1087,19 @@ template {
   display: -ms-flexbox;
   display: flex;
   list-style: none;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   font-family: "Barlow", sans-serif;
   font-weight: bolder;
   padding: 2rem 0;
+}
+
+@media screen and (min-width: 1020px) {
+  .footer-list {
+    width: 400px;
+    margin: 0 auto;
+  }
 }
 
 .footer-list__item {
@@ -1088,6 +1107,13 @@ template {
   display: -ms-flexbox;
   display: flex;
   color: Dark-blue;
+}
+
+@media screen and (min-width: 1020px) {
+  .footer-list__item {
+    padding: 0.8rem;
+    padding: 3rem 0;
+  }
 }
 
 .icons {
@@ -1100,6 +1126,13 @@ template {
   -ms-flex-line-pack: center;
       align-content: center;
   list-style: none;
+}
+
+@media screen and (min-width: 1020px) {
+  .icons {
+    width: 230px;
+    margin: 0 auto;
+  }
 }
 
 .icons__item {
