@@ -1,7 +1,7 @@
 .header {
     width: 100%;
     position: relative;
-    background-color: $c-dodgerblue;
+    background-color: #3EBFFF;
     margin: 0;
     &__container {
         padding: 2rem;
@@ -50,6 +50,8 @@
         padding-left: 0;
         background-color: $c-white;
         // display: none;
+        display: none;
+
         @include min-query($d-laptop) {
             display: flex;
             flex-direction: row;
