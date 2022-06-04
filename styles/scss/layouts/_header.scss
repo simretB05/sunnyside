@@ -50,7 +50,7 @@
         padding-left: 0;
         background-color: $c-white;
         // display: none;
-        display: none;
+        // display: none;
 
         @include min-query($d-laptop) {
             display: flex;
@@ -111,4 +111,7 @@
     @include min-query($d-laptop) {
         display: none;
     }
+}
+.change{
+    display: block;
 }

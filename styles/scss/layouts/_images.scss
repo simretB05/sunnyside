@@ -1,23 +1,23 @@
-.images {
-    display: flex;
-    flex-wrap: wrap;
+// .images {
+//     display: flex;
+//     flex-wrap: wrap;
 
-    &__image {
-        // width: 50%;
-        height: 100%;
-    }
+//     &__image {
+//         // width: 50%;
+//         height: 100%;
+//     }
 
-    img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-        display: block;
-    }
+//     img {
+//         height: 100%;
+//         width: 100%;
+//         object-fit: cover;
+//         display: block;
+//     }
 
-    @include min-query($d-laptop) {
-        &__image {
-            width: auto;
-            flex: 1;
-        }
-    }
-}
+//     @include min-query($d-laptop) {
+//         &__image {
+//             width: auto;
+//             flex: 1;
+//         }
+//     }
+// }

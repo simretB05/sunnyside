@@ -83,8 +83,6 @@ flex-direction: column;
     }
 &__image{
     background-image: url(../../../assets/images/mobile/image-transform.jpg);
-    background-repeat:no-repeat ;
-        height: 100%;
         background-position:center;
         object-fit: contain;
         width: 100%;
@@ -124,6 +122,7 @@ flex-direction: column;
         padding: 2rem;
         @include min-query($d-laptop) {
             text-align: start;
+            width: 369px;
           
         }
         @include min-query($d-laptop-l){
@@ -146,7 +145,7 @@ flex-direction: column;
             font-size: 15px;
             text-align: start;
             width: 376.6px;
-            margin: 1rem 0 1rem 5rem;
+            margin: 1rem 0 1rem 4rem;
 
         }
             @include min-query($d-laptop-l){
@@ -163,7 +162,6 @@ flex-direction: column;
         margin: 0;
         width: 116px;
         font-size: 15px;
-        // margin:  .5rem 3.57rem;
         margin: 0 auto;
         padding: 1rem 0 0 0;
         text-transform: uppercase;
@@ -171,6 +169,10 @@ flex-direction: column;
         cursor: pointer;
         color: $c-dark-desaturated-blue;
         text-align: center;
+        @include min-query($d-laptop){
+            margin: 0 4rem;
+
+        }
         @include min-query($d-laptop-l){
                 margin: 3.5rem 10.57rem;
 
@@ -238,7 +240,7 @@ flex-direction: column;
 
 .collab-card {
     width: 100%;
-    height: 403px;
+    height: 468px;
    
     @include min-query($d-laptop){
        width: 100%;
@@ -274,6 +276,10 @@ flex-direction: column;
         margin: 0 auto;
         // margin-bottom: 1rem;
         @include min-query($d-laptop){
+            width: 392px;
+                        margin: 2.7rem;
+                        text-align: start;
+
         
 
         }
@@ -288,12 +294,16 @@ flex-direction: column;
         font-family: $ff-fraunces;
         color: black;
         font-weight: bolder;
-        width: 116px;
+        width: 107px;
         font-size: 15px;
         margin-top: 2rem;
         margin-bottom: 1rem;
         text-transform: uppercase;
         font-weight: 600;
+          @include min-query($d-laptop){
+        
+
+        }
         &::before {
             content: "";
             width: 100%;
@@ -530,53 +540,57 @@ flex-direction: column;
 
 .collection {
     width: 100%;
-    height: 376px;
-    margin: 0;
-    @include min-query($d-tablet) {
-        height: 768px;
-    }
-    @include min-query($d-laptop){
-        height: 473px;
-
-    }
-}
-.images {
     height: 100%;
-    width: 100%;
     margin: 0;
-    background-image: url(../../../assets/images/mobile/image-gallery-milkbottles.jpg),
-                      url(../../../assets/images/mobile/image-gallery-orange.jpg),
-                      url(../../../assets/images/mobile/image-gallery-cone.jpg),
-                      url(../../../assets/images/mobile/image-gallery-sugar-cubes.jpg);
-
-
-     background-repeat: no-repeat;
-  background-position: left top, right top,left bottom,right bottom;
-  background-size: 51%;
-  object-fit: cover;
-    @include min-query($d-tablet) {
-        height: 768px;
-        max-width: 767px;
-       background-size:50% ;
-        object-fit: fit;
-   
+    display: flex;
+    flex-wrap: wrap;
+    @include min-query($d-laptop){
+    display: none;
+    
     }
-      @include min-query($d-laptop){
-          margin: 0;
-        background-image: url(../../../assets/images/desktop/image-gallery-milkbottles.jpg),
-                          url(../../../assets/images/desktop/image-gallery-orange.jpg),
-                          url(../../../assets/images/desktop/image-gallery-cone.jpg),
-                          url(../../../assets/images/desktop/image-gallery-sugarcubes.jpg);
-
-       background-repeat: no-repeat;
-         background-position: 0 px 0 px, 200 px 0 px,400 px 0 px,600 px 0 px;
-       background-size: 60px;
-       object-fit: cover;
-       height: 423px;
-        max-width: 682px;
-                      
+    & img{
+    width: 50%;
+    @include min-query($d-laptop){
+    display: none;
+  }
     }
 }
+.collection-desktop {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: none;
+    @include min-query($d-laptop){
+     display: block;
+    }
+    & img{
+    display: none;
+    @include min-query($d-laptop){
+        display:inline-block;
+        width: 24.68%;
+        flex-direction: row;
+  }
+    }
+}
+// .images {
+//     display: flex;
+//     width: 50%;
+// //     background-image: url(../../../assets/images/mobile/image-gallery-milkbottles.jpg),
+// //                       url(../../../assets/images/mobile/image-gallery-orange.jpg),
+// //                       url(../../../assets/images/mobile/image-gallery-cone.jpg),
+// //                       url(../../../assets/images/mobile/image-gallery-sugar-cubes.jpg);
+// //                       height: 100%;
+// //                       width: 100%;
+// //                       margin: 0;
+// //     background-repeat: no-repeat;
+// //     background-position: left top, right top,left bottom,right bottom;
+// //     background-size: 50%;
+// //     object-fit: cover;
+// //     @include min-query($d-laptop){
+// //     display: none;
+                      
+// //     }
+// }
 //footer-section//
 .footer-container {
     width: 100%;
